@@ -109,10 +109,11 @@
               </div>
             </div>
 
-            <button onclick="alert('첫 번째 보고서 서브페이지 링크 경로: ./data1/index.html');" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
+            <!-- 첫 번째 보고서 바로가기 링크 -->
+            <a href="./data1/index.html" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
               <span>보고서 웹페이지에서 열기</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+            </a>
           </div>
 
           <!-- 카드 2: 도로교통공단 데이터 -->
@@ -141,13 +142,14 @@
               </div>
             </div>
 
-            <button onclick="alert('두 번째 보고서 서브페이지 링크 경로: ./data2/index.html');" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
+            <!-- 두 번째 보고서 바로가기 링크 -->
+            <a href="./data2/index.html" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
               <span>보고서 웹페이지에서 열기</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+            </a>
           </div>
 
-          <!-- 카드 3: 어린이 교통사고 데이터 (연결 완료) -->
+          <!-- 카드 3: 어린이 교통사고 데이터 -->
           <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div class="flex items-center justify-between mb-4">
@@ -173,11 +175,11 @@
               </div>
             </div>
 
-            <!-- 세 번째 보고서 페이지로 전환 버튼 -->
-            <button onclick="switchView('child-accident')" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2 cursor-pointer">
+            <!-- 세 번째 보고서 href 바로가기 링크로 변경 -->
+            <a href="./data3/index.html" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
               <span>보고서 웹페이지에서 열기</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+            </a>
           </div>
 
         </div>
@@ -192,300 +194,9 @@
     </footer>
   </div>
 
-  <!-- ========================================== -->
-  <!-- 뷰 2: 어린이 교통사고 데이터 심층 분석 리포트 (#view-child-accident) -->
-  <!-- ========================================== -->
-  <div id="view-child-accident" class="hidden flex-col min-h-screen bg-slate-50 text-slate-800 antialiased">
-    <!-- 상단 헤더 -->
-    <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-3">
-                <!-- 홈버튼 (메인 화면으로 되돌아가기) -->
-                <button onclick="switchView('home')" class="p-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-xl transition-colors border border-slate-700 flex items-center justify-center gap-2 group cursor-pointer" title="메인 페이지로 이동">
-                    <i class="fa-solid fa-house text-base group-hover:scale-110 transition-transform"></i>
-                    <span class="text-xs font-semibold hidden sm:inline">홈</span>
-                </button>
-                <div class="p-2.5 bg-amber-500 rounded-xl text-white shadow-lg shadow-amber-500/30">
-                    <i class="fa-solid fa-child-reaching text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold tracking-tight">어린이 교통사고 통계 데이터 심층 분석 리포트</h1>
-                    <p class="text-xs text-slate-400">16개 광역 시·도별 수치 명확화 및 치사율·위험도 다차원 정밀 분석 (총 400건 전수 분석)</p>
-                </div>
-            </div>
-            <div class="flex items-center space-x-2">
-                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse"></span>
-                    실제 지역명 100% 매핑 완료
-                </span>
-            </div>
-        </div>
-    </header>
-
-    <!-- 메인 컨텐츠 컨테이너 -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 flex-grow">
-
-        <!-- 1. 통계 요약 카드 (KPIs) -->
-        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <!-- 총 사고건수 -->
-            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-                <div class="flex items-center justify-between text-slate-500 mb-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider">총 사고 건수</span>
-                    <i class="fa-solid fa-car-side text-blue-500 text-lg"></i>
-                </div>
-                <div class="text-3xl font-extrabold text-slate-900">400 <span class="text-base font-normal text-slate-500">건</span></div>
-                <div class="mt-3 text-xs text-slate-500 flex items-center">
-                    <span class="text-slate-700 font-medium mr-1">전국 16개 광역 시·도 전체 합계</span>
-                </div>
-            </div>
-
-            <!-- 총 사망자수 -->
-            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-                <div class="flex items-center justify-between text-slate-500 mb-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider">총 사망자 수</span>
-                    <i class="fa-solid fa-triangle-exclamation text-red-500 text-lg"></i>
-                </div>
-                <div class="text-3xl font-extrabold text-red-600">2 <span class="text-base font-normal text-slate-500">명</span></div>
-                <div class="mt-3 text-xs text-slate-500 flex items-center">
-                    <span class="text-red-500 font-medium mr-1">전국 평균 치사율 0.50%</span>
-                </div>
-            </div>
-
-            <!-- 총 부상자수 -->
-            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-                <div class="flex items-center justify-between text-slate-500 mb-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider">총 부상자 수</span>
-                    <i class="fa-solid fa-kit-medical text-amber-500 text-lg"></i>
-                </div>
-                <div class="text-3xl font-extrabold text-amber-600">489 <span class="text-base font-normal text-slate-500">명</span></div>
-                <div class="mt-3 text-xs text-slate-500 flex items-center">
-                    <span class="text-amber-600 font-medium mr-1">사고 건당 1.22명 부상</span>
-                </div>
-            </div>
-
-            <!-- 최고 위험 지역 치사율 -->
-            <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-sm hover:shadow-md transition-all">
-                <div class="flex items-center justify-between text-slate-500 mb-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider">최고 치사율 지역</span>
-                    <i class="fa-solid fa-chart-line text-purple-500 text-lg"></i>
-                </div>
-                <div class="text-3xl font-extrabold text-purple-700">3.70 <span class="text-base font-normal text-slate-500">%</span></div>
-                <div class="mt-3 text-xs text-slate-500 flex items-center">
-                    <span class="text-purple-600 font-medium mr-1">충청북도 (27건 중 사망 1명)</span>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. 차트 영역 Grid -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- 차트 1: 시도별 사고건수 vs 부상자수 비교 -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-                <div class="flex justify-between items-center mb-4">
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-800">시·도별 사고건수 및 부상자수 분포</h2>
-                        <p class="text-xs text-slate-500">지역별 어린이 교통사고 발생 규모 및 부상자 발생 비율 비교</p>
-                    </div>
-                </div>
-                <div class="h-80 relative">
-                    <canvas id="accidentsVsInjuriesChart"></canvas>
-                </div>
-            </div>
-
-            <!-- 차트 2: 시도별 치사율(%) 순위 -->
-            <div class="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm">
-                <div class="flex justify-between items-center mb-4">
-                    <div>
-                        <h2 class="text-lg font-bold text-slate-800">시·도별 치사율 (%) 랭킹</h2>
-                        <p class="text-xs text-slate-500">사고 발생 건 대비 사망자 비율 분석 (전국 평균 0.50%)</p>
-                    </div>
-                </div>
-                <div class="h-80 relative">
-                    <canvas id="fatalityRateChart"></canvas>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. 핵심 분석 및 인사이트 섹션 -->
-        <section class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm space-y-6">
-            <div class="border-b border-slate-100 pb-4">
-                <h2 class="text-xl font-bold text-slate-900 flex items-center gap-2">
-                    <i class="fa-solid fa-magnifying-glass-chart text-amber-600"></i>
-                    어린이 교통사고 핵심 통계 분석 및 주요 지자체별 특징
-                </h2>
-                <p class="text-sm text-slate-500 mt-1">지역별 수치 데이터에서 도출된 주요 패턴과 지자체 특성 리포트</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- 인사이트 1 -->
-                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60">
-                    <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm mb-3">1</div>
-                    <h3 class="font-bold text-slate-800 mb-2">최다 사고 발생 지자체 (대전·제주·울산)</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        <strong class="text-slate-900">대전광역시</strong>는 사고건수 <strong class="text-blue-600">38건</strong>(부상 40명)으로 전국 최다 발생을 기록했으며, <strong class="text-slate-900">제주특별자치도</strong>가 <strong class="text-blue-600">35건</strong>(부상 44명), <strong class="text-slate-900">울산광역시</strong>가 <strong class="text-blue-600">34건</strong>(부상 42명, 사망 1명)으로 뒤를 이었습니다. 스쿨존 및 학원가 주변 보행 안전망 강화가 시급합니다.
-                    </p>
-                </div>
-
-                <!-- 인사이트 2 -->
-                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60">
-                    <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm mb-3">2</div>
-                    <h3 class="font-bold text-slate-800 mb-2">사망자 발생 고치사율 지역 (충북·울산)</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        어린이 교통사고 전국 총 사망자 2명은 <strong class="text-slate-900">충청북도</strong>(27건 중 1명 사망, 치사율 <strong class="text-red-600">3.70%</strong>)와 <strong class="text-slate-900">울산광역시</strong>(34건 중 1명 사망, 치사율 <strong class="text-red-600">2.94%</strong>)에서 발생했습니다. 사망사고가 일어난 구역에 대한 정밀 위험 요인 분석과 속도 제한 시설 보강이 요구됩니다.
-                    </p>
-                </div>
-
-                <!-- 인사이트 3 -->
-                <div class="bg-slate-50 p-5 rounded-xl border border-slate-200/60">
-                    <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-sm mb-3">3</div>
-                    <h3 class="font-bold text-slate-800 mb-2">높은 부상자/사고 비율 지표 (서울·전북·경북)</h3>
-                    <p class="text-xs text-slate-600 leading-relaxed">
-                        사고 1건당 부상자 비율은 <strong class="text-slate-900">서울특별시 (1.55명/건)</strong>, <strong class="text-slate-900">인천광역시 (1.33명/건)</strong>, <strong class="text-slate-900">전라북도 (1.32명/건)</strong> 순으로 높게 나타났습니다. 통학버스 등 다수인 승차 차량 사고 또는 등하교 시 동반 보행 중 집단 피해 발생 가능성을 시사합니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. 상세 데이터 테이블 (정렬 및 필터 지원) -->
-        <section class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden">
-            <div class="p-6 border-b border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-                <div>
-                    <h2 class="text-lg font-bold text-slate-900">시·도별 어린이 교통사고 세부 통계 현황</h2>
-                    <p class="text-xs text-slate-500 mt-0.5">각 열 제목을 클릭하여 오름차순/내림차순 정렬할 수 있습니다.</p>
-                </div>
-                <div class="flex items-center gap-2 w-full md:w-auto">
-                    <div class="relative w-full md:w-64">
-                        <input type="text" id="searchInput" onkeyup="filterTable()" placeholder="시·도 명칭 검색 (예: 서울, 경기)..." class="w-full pl-9 pr-4 py-2 text-xs bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
-                        <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400 text-xs"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-slate-600" id="dataTable">
-                    <thead class="text-xs text-slate-700 uppercase bg-slate-100/80 border-b border-slate-200">
-                        <tr>
-                            <th scope="col" class="py-3.5 px-6 font-semibold cursor-pointer hover:bg-slate-200/60" onclick="sortTable(0)">
-                                시·도 명칭 <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                            <th scope="col" class="py-3.5 px-6 font-semibold text-right cursor-pointer hover:bg-slate-200/60" onclick="sortTable(1)">
-                                사고건수 (건) <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                            <th scope="col" class="py-3.5 px-6 font-semibold text-right cursor-pointer hover:bg-slate-200/60" onclick="sortTable(2)">
-                                사망자수 (명) <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                            <th scope="col" class="py-3.5 px-6 font-semibold text-right cursor-pointer hover:bg-slate-200/60" onclick="sortTable(3)">
-                                부상자수 (명) <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                            <th scope="col" class="py-3.5 px-6 font-semibold text-right cursor-pointer hover:bg-slate-200/60" onclick="sortTable(4)">
-                                치사율 (%) <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                            <th scope="col" class="py-3.5 px-6 font-semibold text-center cursor-pointer hover:bg-slate-200/60" onclick="sortTable(5)">
-                                위험등급 평가 <i class="fa-solid fa-sort text-slate-400 ml-1"></i>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody id="tableBody" class="divide-y divide-slate-100">
-                        <!-- JS 데이터 렌더링 -->
-                    </tbody>
-                    <tfoot class="bg-slate-900 text-white font-semibold">
-                        <tr>
-                            <td class="py-4 px-6">전국 합계 / 평균</td>
-                            <td class="py-4 px-6 text-right font-bold text-blue-300">400</td>
-                            <td class="py-4 px-6 text-right font-bold text-red-400">2</td>
-                            <td class="py-4 px-6 text-right font-bold text-amber-300">489</td>
-                            <td class="py-4 px-6 text-right font-bold text-purple-300">0.50%</td>
-                            <td class="py-4 px-6 text-center"><span class="px-2 py-1 bg-slate-800 rounded text-xs">전국 종합 지표</span></td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
-        </section>
-
-        <!-- 5. 맞춤형 정책 제언 및 결론 -->
-        <section class="bg-gradient-to-br from-slate-900 via-amber-950 to-slate-900 rounded-2xl p-6 sm:p-8 text-white shadow-xl space-y-6">
-            <div class="flex items-center space-x-3">
-                <i class="fa-solid fa-shield-cat text-2xl text-amber-400"></i>
-                <h2 class="text-xl font-bold">어린이 교통사고 예방을 위한 지자체 맞춤형 4대 정책 제언</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-300 text-xs sm:text-sm">
-                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h3 class="text-amber-300 font-bold mb-2 text-base flex items-center gap-2">
-                        <i class="fa-solid fa-school text-amber-400"></i> 어린이 보호구역(스쿨존) 및 학원가 완전 안전지대화
-                    </h3>
-                    <p class="leading-relaxed text-slate-300">
-                        사고 발생 빈도가 높은 지자체(대전, 제주, 울산 등)를 중심으로 스쿨존 내 신호위반·과속 단속 카메라 설치율 100% 달성, 보차도 분리 펜스 설치 및 옐로카펫 지정을 대폭 확대해야 합니다.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h3 class="text-amber-300 font-bold mb-2 text-base flex items-center gap-2">
-                        <i class="fa-solid fa-bus text-amber-400"></i> 어린이 통학버스 안전관리 정밀 점검 강화
-                    </h3>
-                    <p class="leading-relaxed text-slate-300">
-                        건당 부상자 수가 높은 수치를 보이는 지역을 대상으로 학원, 어린이집 통학버스 내 '어린이 하차 확인 장치' 동작 점검, 동승 보호자 탑승 의무화 점검 및 운전자 안전교육을 정례화해야 합니다.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h3 class="text-amber-300 font-bold mb-2 text-base flex items-center gap-2">
-                        <i class="fa-solid fa-crosswalk text-amber-400"></i> 스마트 교통안전 인프라(AI 보행자 감지) 구축
-                    </h3>
-                    <p class="leading-relaxed text-slate-300">
-                        어린이의 시야 확보가 어려운 골목길 횡단보도에 AI 보행자 감지 센서, 음성안내 보행보조 장치, 차로 보행자 경보 표지판을 우선적으로 구축하여 사고를 사전 차단해야 합니다.
-                    </p>
-                </div>
-
-                <div class="bg-white/5 p-4 rounded-xl border border-white/10">
-                    <h3 class="text-amber-300 font-bold mb-2 text-base flex items-center gap-2">
-                        <i class="fa-solid fa-child text-amber-400"></i> 체험형 어린이 교통안전 교실 및 옐로카드 보급
-                    </h3>
-                    <p class="leading-relaxed text-slate-300">
-                        초등학교 및 유치원 대상 실습형 교통안전 체험교육을 주기적으로 실시하고, 야간 및 우천 시 운전자 시인성을 높이는 가방용 빛 반사 옐로카드 보급을 상시화해야 합니다.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- 푸터 -->
-    <footer class="bg-slate-900 border-t border-slate-800 text-slate-500 py-6 text-center text-xs">
-        <div class="max-w-7xl mx-auto px-4">
-            <p>© 2026 대한민국 시·도별 어린이 교통사고 심층 분석 보고서. All Data Correctly Restored & Mapped.</p>
-        </div>
-    </footer>
-  </div>
-
   <script>
     // ----------------------------------------------------
-    // 1. 화면 스위칭 (SPA 라우팅)
-    // ----------------------------------------------------
-    function switchView(viewName) {
-      const viewHome = document.getElementById('view-home');
-      const viewChildAccident = document.getElementById('view-child-accident');
-
-      if (viewName === 'child-accident') {
-        viewHome.classList.add('hidden');
-        viewChildAccident.classList.remove('hidden');
-        viewChildAccident.classList.add('flex');
-        window.scrollTo(0, 0);
-
-        // 보고서 페이지가 열린 후 차트와 테이블 초기화
-        setTimeout(() => {
-          renderTable(tableData);
-          initCharts();
-        }, 50);
-      } else {
-        viewChildAccident.classList.add('hidden');
-        viewChildAccident.classList.remove('flex');
-        viewHome.classList.remove('hidden');
-        window.scrollTo(0, 0);
-      }
-    }
-
-    // ----------------------------------------------------
-    // 2. 다크모드 관리 스크립트 (메인 화면)
+    // 다크모드 관리 스크립트
     // ----------------------------------------------------
     const themeToggleBtn = document.getElementById('themeToggleBtn');
     const themeIcon = document.getElementById('themeIcon');
@@ -514,191 +225,6 @@
       localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
       updateThemeUI(isDarkMode);
     });
-
-    // ----------------------------------------------------
-    // 3. 어린이 교통사고 데이터 및 리포트 로직
-    // ----------------------------------------------------
-    const rawData = [
-        { name: "서울특별시", shortName: "서울", accidents: 11, deaths: 0, injuries: 17 },
-        { name: "부산광역시", shortName: "부산", accidents: 9, deaths: 0, injuries: 10 },
-        { name: "대구광역시", shortName: "대구", accidents: 12, deaths: 0, injuries: 15 },
-        { name: "인천광역시", shortName: "인천", accidents: 6, deaths: 0, injuries: 8 },
-        { name: "광주광역시", shortName: "광주", accidents: 33, deaths: 0, injuries: 36 },
-        { name: "대전광역시", shortName: "대전", accidents: 38, deaths: 0, injuries: 40 },
-        { name: "울산광역시", shortName: "울산", accidents: 34, deaths: 1, injuries: 42 },
-        { name: "경기도", shortName: "경기", accidents: 27, deaths: 0, injuries: 34 },
-        { name: "강원특별자치도", shortName: "강원", accidents: 28, deaths: 0, injuries: 37 },
-        { name: "충청북도", shortName: "충북", accidents: 27, deaths: 1, injuries: 31 },
-        { name: "충청남도", shortName: "충남", accidents: 27, deaths: 0, injuries: 33 },
-        { name: "전라북도", shortName: "전북", accidents: 31, deaths: 0, injuries: 41 },
-        { name: "전라남도", shortName: "전남", accidents: 31, deaths: 0, injuries: 40 },
-        { name: "경상북도", shortName: "경북", accidents: 30, deaths: 0, injuries: 33 },
-        { name: "경상남도", shortName: "경남", accidents: 21, deaths: 0, injuries: 28 },
-        { name: "제주특별자치도", shortName: "제주", accidents: 35, deaths: 0, injuries: 44 }
-    ];
-
-    let tableData = rawData.map(item => {
-        const fatalityRate = parseFloat(((item.deaths / item.accidents) * 100).toFixed(2));
-        const injuryRate = parseFloat((item.injuries / item.accidents).toFixed(2));
-        
-        let riskLevel = "보통";
-        let badgeClass = "bg-slate-100 text-slate-700 border-slate-200";
-        
-        if (item.deaths > 0 || item.accidents >= 35) {
-            riskLevel = "최고 위험";
-            badgeClass = "bg-red-50 text-red-700 border-red-200 font-bold";
-        } else if (item.accidents >= 30) {
-            riskLevel = "고위험";
-            badgeClass = "bg-amber-50 text-amber-700 border-amber-200 font-semibold";
-        } else if (item.accidents <= 12) {
-            riskLevel = "저위험";
-            badgeClass = "bg-emerald-50 text-emerald-700 border-emerald-200";
-        }
-
-        return {
-            ...item,
-            fatalityRate,
-            injuryRate,
-            riskLevel,
-            badgeClass
-        };
-    });
-
-    function renderTable(data) {
-        const tbody = document.getElementById("tableBody");
-        if (!tbody) return;
-        tbody.innerHTML = "";
-
-        data.forEach(item => {
-            const tr = document.createElement("tr");
-            tr.className = "hover:bg-slate-50/80 transition-colors";
-            tr.innerHTML = `
-                <td class="py-3.5 px-6 font-medium text-slate-900">
-                    ${item.name} <span class="text-xs text-slate-400 font-normal">(${item.shortName})</span>
-                </td>
-                <td class="py-3.5 px-6 text-right font-semibold text-slate-800">${item.accidents.toLocaleString()}</td>
-                <td class="py-3.5 px-6 text-right font-semibold ${item.deaths > 0 ? 'text-red-600 font-bold' : 'text-slate-400'}">${item.deaths.toLocaleString()}</td>
-                <td class="py-3.5 px-6 text-right font-semibold text-amber-600">${item.injuries.toLocaleString()}</td>
-                <td class="py-3.5 px-6 text-right font-bold ${item.fatalityRate > 0 ? 'text-red-600' : 'text-slate-700'}">${item.fatalityRate.toFixed(2)}%</td>
-                <td class="py-3.5 px-6 text-center">
-                    <span class="inline-block px-2.5 py-1 text-xs rounded-md border ${item.badgeClass}">
-                        ${item.riskLevel}
-                    </span>
-                </td>
-            `;
-            tbody.appendChild(tr);
-        });
-    }
-
-    function filterTable() {
-        const query = document.getElementById("searchInput").value.toLowerCase();
-        const filtered = tableData.filter(item => 
-            item.name.toLowerCase().includes(query) || 
-            item.shortName.toLowerCase().includes(query)
-        );
-        renderTable(filtered);
-    }
-
-    let sortDirection = false;
-    function sortTable(columnIndex) {
-        sortDirection = !sortDirection;
-        const keys = ['name', 'accidents', 'deaths', 'injuries', 'fatalityRate', 'riskLevel'];
-        const key = keys[columnIndex];
-
-        tableData.sort((a, b) => {
-            if (a[key] < b[key]) return sortDirection ? -1 : 1;
-            if (a[key] > b[key]) return sortDirection ? 1 : -1;
-            return 0;
-        });
-
-        renderTable(tableData);
-    }
-
-    let chart1Instance = null;
-    let chart2Instance = null;
-
-    function initCharts() {
-        // 차트 1: 시도별 사고건수 vs 부상자수
-        const ctx1 = document.getElementById('accidentsVsInjuriesChart');
-        if (ctx1) {
-            if (chart1Instance) chart1Instance.destroy();
-            chart1Instance = new Chart(ctx1.getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: tableData.map(d => d.shortName),
-                    datasets: [
-                        {
-                            label: '사고건수 (건)',
-                            data: tableData.map(d => d.accidents),
-                            backgroundColor: 'rgba(59, 130, 246, 0.85)',
-                            borderRadius: 6,
-                        },
-                        {
-                            label: '부상자수 (명)',
-                            data: tableData.map(d => d.injuries),
-                            backgroundColor: 'rgba(245, 158, 11, 0.75)',
-                            borderRadius: 6,
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'top', labels: { font: { size: 11 } } },
-                        tooltip: { mode: 'index', intersect: false }
-                    },
-                    scales: {
-                        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-                        y: { border: { dash: [4, 4] }, ticks: { font: { size: 10 } } }
-                    }
-                }
-            });
-        }
-
-        // 차트 2: 시도별 치사율 (%) 랭킹
-        const sortedByFatality = [...tableData].sort((a, b) => b.fatalityRate - a.fatalityRate);
-        const ctx2 = document.getElementById('fatalityRateChart');
-        if (ctx2) {
-            if (chart2Instance) chart2Instance.destroy();
-            chart2Instance = new Chart(ctx2.getContext('2d'), {
-                type: 'bar',
-                data: {
-                    labels: sortedByFatality.map(d => d.shortName),
-                    datasets: [{
-                        label: '치사율 (%)',
-                        data: sortedByFatality.map(d => d.fatalityRate),
-                        backgroundColor: sortedByFatality.map(d => d.fatalityRate > 0 ? 'rgba(225, 29, 72, 0.85)' : 'rgba(100, 116, 139, 0.4)'),
-                        borderRadius: 6,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    return ` 치사율: ${context.parsed.y}%`;
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: { grid: { display: false }, ticks: { font: { size: 11 } } },
-                        y: { 
-                            border: { dash: [4, 4] },
-                            ticks: { 
-                                font: { size: 10 },
-                                callback: value => value + '%'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-    }
   </script>
 </body>
 </html>
