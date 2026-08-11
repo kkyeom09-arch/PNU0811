@@ -37,7 +37,6 @@
 </head>
 <body class="bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col justify-between">
 
-  <!-- Header Navigation -->
   <header class="sticky top-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2">
@@ -48,7 +47,6 @@
       </div>
 
       <div class="flex items-center gap-4">
-        <!-- Theme Toggle Button -->
         <button id="themeToggleBtn" aria-label="테마 전환" class="p-2.5 rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800 transition-all flex items-center gap-2 text-sm font-medium">
           <span id="themeIcon">🌙</span>
           <span id="themeText" class="hidden sm:inline">다크 모드</span>
@@ -57,10 +55,8 @@
     </div>
   </header>
 
-  <!-- Main Content -->
   <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full">
     
-    <!-- Hero Section -->
     <section class="text-center py-12 sm:py-16">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 text-sm font-medium mb-6">
         <span>📊 공공데이터 분석 포트폴리오</span>
@@ -73,7 +69,6 @@
       </p>
     </section>
 
-    <!-- Cards Section -->
     <section class="mt-8">
       <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
         <span>📂 프로젝트 보고서</span>
@@ -81,7 +76,6 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         
-        <!-- Card 1: 진로 보고서 -->
         <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -107,13 +101,12 @@
             </div>
           </div>
 
-          <button onclick="openModal('careerModal')" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
+          <a href="./data1/index.html" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
             <span>보고서 웹페이지에서 열기</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </button>
+          </a>
         </div>
 
-        <!-- Card 2: 교통데이터분석 보고서 -->
         <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
           <div>
             <div class="flex items-center justify-between mb-4">
@@ -139,10 +132,10 @@
             </div>
           </div>
 
-          <button onclick="openModal('trafficModal')" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
+          <a href="./data2/index.html" class="w-full py-3 px-4 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-xl transition-all shadow-md hover:shadow-brand-500/20 flex items-center justify-center gap-2">
             <span>보고서 웹페이지에서 열기</span>
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-          </button>
+          </a>
         </div>
 
       </div>
@@ -150,7 +143,6 @@
 
   </main>
 
-  <!-- Footer -->
   <footer class="border-t border-gray-200 dark:border-gray-800 py-8 bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500 dark:text-gray-400">
       <p>© 2026 제겸 (Jegyeom). All rights reserved.</p>
@@ -158,101 +150,6 @@
     </div>
   </footer>
 
-  <!-- Modal 1: 진로 보고서 -->
-  <div id="careerModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto modal-backdrop">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-gray-200 dark:border-gray-700 relative">
-      
-      <button onclick="closeModal('careerModal')" class="absolute top-6 right-6 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 rounded-lg">
-        ✕
-      </button>
-
-      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
-        대학알리미 데이터 분석
-      </span>
-      <h2 class="text-2xl font-bold mt-2 mb-4">전공 계열별 취업률 및 진로 동향 보고서</h2>
-      
-      <div class="prose dark:prose-invert max-w-none text-sm text-gray-600 dark:text-gray-300 space-y-4">
-        <p>
-          본 보고서는 <strong>대학알리미 공공데이터</strong>를 가공하여 국내 대학 주요 계열별 취업률 및 진학률을 비교 분석한 자료입니다.
-        </p>
-
-        <!-- Chart Container -->
-        <div class="my-6 bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-          <h4 class="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 text-center">주요 계열별 평균 취업률 (%)</h4>
-          <canvas id="careerChart" height="200"></canvas>
-        </div>
-
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">주요 분석 내용</h3>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><strong>공학 및 의약계열의 지속적 강세:</strong> 전체 계열 중 취업률 70% 이상을 유지하며 안정적인 진로망 형성.</li>
-          <li><strong>자연/인문계열의 대학원 진학률 증가:</strong> 학부 졸업 후 즉시 취업보다 전문성을 강화하기 위한 대학원 진학 비중 증가 추세.</li>
-          <li><strong>융합 전공의 부상:</strong> 신기술(AI, 빅데이터) 관련 융합학과 졸업생의 유지취업률이 평균 대비 5.4%p 높게 나타남.</li>
-        </ul>
-
-        <div class="p-4 bg-brand-50 dark:bg-brand-900/20 border-l-4 border-brand-500 rounded-r-lg mt-6">
-          <h4 class="font-bold text-brand-700 dark:text-brand-300">결론 및 시사점</h4>
-          <p class="text-xs text-brand-600 dark:text-brand-400 mt-1">
-            단순 취업률뿐만 아니라 '유지취업률' 및 '전공 일치도' 데이터를 함께 고려한 진로 설계를 추진할 필요성이 확인되었습니다.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-end">
-        <button onclick="closeModal('careerModal')" class="px-5 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-xl font-medium text-sm transition-all">
-          닫기
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Modal 2: 교통데이터분석 보고서 -->
-  <div id="trafficModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 sm:p-6 overflow-y-auto modal-backdrop">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-gray-200 dark:border-gray-700 relative">
-      
-      <button onclick="closeModal('trafficModal')" class="absolute top-6 right-6 p-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 rounded-lg">
-        ✕
-      </button>
-
-      <span class="px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300">
-        도로교통공단 데이터 분석
-      </span>
-      <h2 class="text-2xl font-bold mt-2 mb-4">도심 교통사고 발생 패턴 및 위험지역 분석</h2>
-      
-      <div class="prose dark:prose-invert max-w-none text-sm text-gray-600 dark:text-gray-300 space-y-4">
-        <p>
-          본 보고서는 <strong>도로교통공단 TASS 빅데이터</strong>를 활용하여 시간대별 accident 위험도와 보행자 관련 사고 패턴을 다각도로 분석한 결과입니다.
-        </p>
-
-        <!-- Chart Container -->
-        <div class="my-6 bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
-          <h4 class="text-sm font-semibold mb-2 text-gray-700 dark:text-gray-300 text-center">시간대별 교통사고 발생 비율 (%)</h4>
-          <canvas id="trafficChart" height="200"></canvas>
-        </div>
-
-        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mt-6">주요 분석 결과</h3>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><strong>퇴근 시간대 집중:</strong> 18시~20시 사이의 사고 발생 비율이 전체의 24.5%로 가장 높은 비중을 차지함.</li>
-          <li><strong>이륜차 및 스쿨존 사고 패턴:</strong> 야간 시간대 배달 이륜차 사고 비율 급증 및 어린이 보호구역 내 서행 준수율과의 상관관계 검증.</li>
-          <li><strong>기상 상태별 위험도:</strong> 우천 시 신호위반 및 안전거리 미확보 사고 발생 건수가 평시 대비 1.8배 증가.</li>
-        </ul>
-
-        <div class="p-4 bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500 rounded-r-lg mt-6">
-          <h4 class="font-bold text-amber-700 dark:text-amber-300">안전 개선 제언</h4>
-          <p class="text-xs text-amber-600 dark:text-amber-400 mt-1">
-            사고 다발 시간대(18~20시) 스마트 가로등 및 보행자 감지 센서 설치 집중 배치를 권장합니다.
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700 flex justify-end">
-        <button onclick="closeModal('trafficModal')" class="px-5 py-2 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-800 dark:text-gray-200 rounded-xl font-medium text-sm transition-all">
-          닫기
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- JavaScript Code -->
   <script>
     // Theme Management Script
     const themeToggleBtn = document.getElementById('themeToggleBtn');
@@ -282,94 +179,7 @@
       isDarkMode = !isDarkMode;
       localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
       updateThemeUI(isDarkMode);
-      
-      // Update charts for theme contrast if needed
-      initCharts();
     });
-
-    // Modal Control Functions
-    function openModal(modalId) {
-      document.getElementById(modalId).classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeModal(modalId) {
-      document.getElementById(modalId).classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-
-    // Close Modal on backdrop click
-    window.addEventListener('click', (e) => {
-      if (e.target.classList.contains('modal-backdrop')) {
-        e.target.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-      }
-    });
-
-    // Render Chart.js
-    let careerChartObj = null;
-    let trafficChartObj = null;
-
-    function initCharts() {
-      const isDark = document.documentElement.classList.contains('dark');
-      const textColor = isDark ? '#9ca3af' : '#4b5563';
-      const gridColor = isDark ? '#374151' : '#e5e7eb';
-
-      // Career Chart
-      const careerCtx = document.getElementById('careerChart').getContext('2d');
-      if (careerChartObj) careerChartObj.destroy();
-      careerChartObj = new Chart(careerCtx, {
-        type: 'bar',
-        data: {
-          labels: ['공학계열', '의약계열', '자연계열', '사회계열', '인문계열', '예체능'],
-          datasets: [{
-            label: '취업률 (%)',
-            data: [72.5, 81.4, 64.2, 62.8, 58.1, 65.0],
-            backgroundColor: 'rgba(59, 130, 246, 0.8)',
-            borderRadius: 6
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { ticks: { color: textColor }, grid: { display: false } },
-            y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
-          }
-        }
-      });
-
-      // Traffic Chart
-      const trafficCtx = document.getElementById('trafficChart').getContext('2d');
-      if (trafficChartObj) trafficChartObj.destroy();
-      trafficChartObj = new Chart(trafficCtx, {
-        type: 'line',
-        data: {
-          labels: ['00-04시', '04-08시', '08-12시', '12-16시', '16-20시', '20-24시'],
-          datasets: [{
-            label: '사고 비율 (%)',
-            data: [6.2, 11.5, 21.3, 22.8, 26.4, 11.8],
-            borderColor: '#f59e0b',
-            backgroundColor: 'rgba(245, 158, 11, 0.1)',
-            fill: true,
-            tension: 0.3
-          }]
-        },
-        options: {
-          responsive: true,
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { ticks: { color: textColor }, grid: { display: false } },
-            y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
-          }
-        }
-      });
-    }
-
-    // Initialize charts on load
-    window.onload = function() {
-      initCharts();
-    };
   </script>
 </body>
 </html>
